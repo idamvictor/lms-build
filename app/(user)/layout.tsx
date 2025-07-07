@@ -1,4 +1,5 @@
 import Header from "@/components/header";
+import { SanityLive } from "@/sanity/lib/live";
 import { ClerkProvider } from "@clerk/nextjs";
 
 export default function UserLayout({
@@ -13,6 +14,8 @@ export default function UserLayout({
         <Header />
         <main className="flex-1">{children}</main>
       </div>
+
+      <SanityLive />
     </ClerkProvider>
   );
 }
